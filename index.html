@@ -3,23 +3,21 @@
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>RightScale Unified Test App</title>
+    <title>Offis Unified Test App</title>
     <link rel="stylesheet" type="text/css" href="style.css" />  
 </head>
-
-<body>
-
-<div id="header">
-<div id="logo"><img src="images/splashscreen.png" /></div>
-</div>
-
-<div class="code_container">
-<div class="code">
-<h3>
-Basic html serving succeeded.
-</h3>
-</div>
-</div>
-
+<body><center>
+	<img src="images/splashscreen.png"/><br><br>
+	<h1>
+		<span id="today"></span>
+	</h1>
+</center>
+<script>
+	var d = new Date();
+	var options = {
+     		day: "numeric", month: "short", year: "numeric"
+	};
+	document.getElementById("today").innerHTML = d.toLocaleDateString("en-AU", options);
+</script>
 </body>
 </html>
